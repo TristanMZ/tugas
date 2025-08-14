@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <style>
+        :root {
+            --bg: #fff;
+            --primary: rgb(114, 200, 228);
+            --secondary: rgb(50, 137, 167);
+            --hover: rgb(31, 95, 116);
+        }
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/*body*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+        }
+
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: var(--primary);
+            color: white;
+            width: 250px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2 {
+            margin: 10px 0;
+        }
+
+        .sidebar button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .sidebar button:hover {
+            background-color: var(--hover);
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-section input, .form-section select {
+            width: calc(50% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section button {
+            padding: 10px 20px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-section button:hover {
+            background-color: var(--hover);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary);
+            color: white;
+        }
+/*footerrrrr*/
+        footer {
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 0rem;
+  }
+
+  footer .Socials {
+    padding: 1rem 0;
+  }
+  
+  footer .Socials a {
+    color: #fff;
+    margin: 1rem;
+  }
+  
+  footer .Socials a:hover,
+  footer .links a:hover {
+    color: var(--bg);
+  }
+  
+  footer .links {
+    margin-bottom: 1.4rem;
+  }
+  
+  footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+  }
+  
+  footer .credit {
+    font-size: 0.8rem;
+  }
+
+  footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+  }
+  
+  /*media*/
+      /*laptop*/
+      @media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+  }
+  /* Tablet */
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 62.5%;
+    }
+}
+
+     /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <img src="salman.png" alt="Admin Avatar">
+        <button>Kelola User</button>
+        <button>Kelola Laporan</button>
+        <button>Logout</button>
+    </div>
+    <div class="content">
+        <h1>Kelola User</h1>
+        <div class="form-section">
+            <select name="tipe_user">
+                <option value="">Tipe User</option>
+                <option value="gudang">Gudang</option>
+                <option value="kasir">Kasir</option>
+            </select>
+            <input type="text" placeholder="Nama">
+            <input type="text" placeholder="Telepon">
+            <input type="text" placeholder="Alamat">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button>Tambah</button>
+            <button>Edit</button>
+            <button>Hapus</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID User</th>
+                    <th>Tipe User</th>
+                    <th>Nama User</th>
+                    <th>Alamat</th>
+                    <th>Telepon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Gudang</td>
+                    <td>Gudang1</td>
+                    <td>Bandung</td>
+                    <td>0812345</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Kasir</td>
+                    <td>Kasir1</td>
+                    <td>Bandung</td>
+                    <td>0812312</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Kasir</td>
+                    <td>Kasir2</td>
+                    <td>Cimahi</td>
+                    <td>0812987</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+<footer>
+    <div class="credit">
+        <p>Created by <a href="">Tristan M.Z</a>  | &copy; 2025 </p>
+      </div>
+    
+</footer>
+</html>
